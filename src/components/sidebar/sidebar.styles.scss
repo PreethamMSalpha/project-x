@@ -1,0 +1,63 @@
+.default {
+  display: flex;
+  flex-direction: row;
+  .topNavBar {
+    flex: 0.85;
+  }
+
+  .sidebar {
+    margin: auto;
+    display: flex;
+    // flex-direction: row;
+    // justify-content: space-between;
+    justify-content: center;
+    text-align: center;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    flex: 0.15;
+    background-color: #2699fb;
+
+    // position: fixed;
+
+    h3 {
+      margin: 10px;
+      cursor: pointer;
+    }
+
+    .sidebarmenu {
+      // padding: 20% 0;
+      padding-top: 200px;
+      // flex: 0.2;
+      // background-color: #2699fb;
+      transition: ease-in-out;
+      align-items: center;
+      justify-content: center;
+      color: white;
+
+      .nameIcon {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .dropdown {
+        .dropdown-content {
+          display: none;
+          align-items: flex-end;
+          text-align: center;
+
+          :hover {
+            // background-color: lightgray;
+            color: gray;
+          }
+        }
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+    }
+  }
+}

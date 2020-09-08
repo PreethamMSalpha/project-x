@@ -1,0 +1,52 @@
+h1 {
+  margin: unset;
+  margin-left: 70px;
+  margin-top: 20px;
+}
+.products {
+  display: flex;
+  flex-direction: row;
+
+  .container {
+    border: solid;
+    border-width: thin;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: fit-content;
+    margin: 40px 70px;
+
+    .title {
+      h3 {
+        margin: unset;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+    }
+
+    .images {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      justify-items: center;
+      padding: 10px;
+    }
+
+    .price {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin: 0 10px;
+    }
+
+    .button {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      cursor: pointer;
+      :hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

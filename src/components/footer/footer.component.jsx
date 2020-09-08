@@ -1,74 +1,103 @@
 import React from "react";
+import CssBaseline from "@material-ui/core/CssBaseline";
+import Grid from "@material-ui/core/Grid";
+import Typography from "@material-ui/core/Typography";
+import Link from "@material-ui/core/Link";
+import { makeStyles } from "@material-ui/core/styles";
+import Container from "@material-ui/core/Container";
+import Box from "@material-ui/core/Box";
 
-import "./footer.styles.scss";
-
-function Footer() {
+function Copyright() {
   return (
-    <div className="Footer">
-      <div className="Heading">
-        <h4>CONTACT US</h4>
-        <h4>SERVICE</h4>
-        <h4>CUSTOMER SERVICE</h4>
-        <h4>COMPANY</h4>
-      </div>
-
-      <div className="Contents">
-        <div className="Contact">
-          <p>+91 9876543210</p>
-          <p>xyz@gmail.com</p>
-        </div>
-        <div className="Service">
-          <p>Course</p>
-          <p>Create your own shop</p>
-          <p>Sell</p>
-          <p>Market</p>
-          <p>Manage</p>
-          <p>Buy</p>
-        </div>
-        <div className="Customer">
-          <p>Contact us</p>
-          <p>Ordering and Payment</p>
-          <p>Shipping</p>
-          <p>Returns</p>
-          <p>FAQ</p>
-        </div>
-        <div className="Company">
-          <p>About us</p>
-          <p>Privacy Policy</p>
-          <p>Terms and Conditions</p>
-        </div>
-      </div>
-    </div>
+    <Typography variant="body2" color="textSecondary" align="center">
+      {"Copyright © "}
+      <Link color="inherit" href="">
+        Project Alpha
+      </Link>{" "}
+      {new Date().getFullYear()}
+      {"."}
+    </Typography>
   );
 }
 
-export default Footer;
+const useStyles = makeStyles((theme) => ({
+  "@global": {
+    ul: {
+      margin: 0,
+      padding: 0,
+      listStyle: "none",
+    },
+  },
 
-// <div className="Contact">
-//         <h4>CONTACT US</h4>
-//         <p>+91 9876543210</p>
-//         <p>xyz@gmail.com</p>
-//       </div>
-//       <div className="Service">
-//         <h4>SERVICE</h4>
-//         <p>Course</p>
-//         <p>Create your own shop</p>
-//         <p>Sell</p>
-//         <p>Market</p>
-//         <p>Manage</p>
-//         <p>Buy</p>
-//       </div>
-//       <div className="Customer">
-//         <h4>CUSTOMER SERVICE</h4>
-//         <p>Contact us</p>
-//         <p>Ordering and Payment</p>
-//         <p>Shipping</p>
-//         <p>Returns</p>
-//         <p>FAQ</p>
-//       </div>
-//       <div className="Company">
-//         <h4>COMPANY</h4>
-//         <p>About us</p>
-//         <p>Privacy Policy</p>
-//         <p>Terms and Conditions</p>
-//       </div>
+  footer: {
+    borderTop: `1px solid ${theme.palette.divider}`,
+    marginTop: theme.spacing(8),
+    paddingTop: theme.spacing(3),
+    paddingBottom: theme.spacing(3),
+    [theme.breakpoints.up("sm")]: {
+      paddingTop: theme.spacing(6),
+      paddingBottom: theme.spacing(6),
+    },
+  },
+}));
+
+const footers = [
+  {
+    title: "Company",
+    description: ["Team", "History", "Contact us", "Locations"],
+  },
+  {
+    title: "Services",
+    description: [
+      "Create your own shop",
+      "Buy",
+      "Sell",
+      "Market",
+      "Course",
+      "Manage",
+    ],
+  },
+  {
+    title: "Customer Service",
+    description: ["Orders and Payments", "Shipping", "Returns", "FAQ"],
+  },
+  {
+    title: "Legal",
+    description: ["Privacy policy", "Terms of use"],
+  },
+];
+
+export default function Pricing() {
+  const classes = useStyles();
+
+  return (
+    <React.Fragment>
+      <CssBaseline />
+      {/* Footer */}
+      <Container maxWidth="md" component="footer" className={classes.footer}>
+        <Grid container spacing={4} justify="space-evenly">
+          {footers.map((footer) => (
+            <Grid item xs={6} sm={3} key={footer.title}>
+              <Typography variant="h6" color="textPrimary" gutterBottom>
+                {footer.title}
+              </Typography>
+              <ul>
+                {footer.description.map((item) => (
+                  <li key={item}>
+                    <Link href="#" variant="subtitle1" color="textSecondary">
+                      {item}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </Grid>
+          ))}
+        </Grid>
+        <Box mt={5}>
+          <Copyright />
+        </Box>
+      </Container>
+      {/* End footer */}
+    </React.Fragment>
+  );
+}
