@@ -11,7 +11,7 @@ function Header() {
       <div className="Header">
         <div className="Logo">
           <h3>LOGO</h3>
-          <h4>Project Alpha</h4>
+          <h4>Shop Keeper</h4>
         </div>
         <div className="Searchbar" for="search">
           <SearchIcon for="search" />

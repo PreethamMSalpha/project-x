@@ -35,6 +35,10 @@ const ContentDiv = styled.div`
     imagePosition === "right" ? "start" : "end"};
 `;
 
+const H1 = styled.h1`
+  margin-left: 0px;
+`;
+
 const ImageDiv = styled.div`
   flex: 0.3;
   /* padding-left: 20px; */
@@ -47,7 +51,7 @@ function HeroComponent({ title, description, img, imagePosition }) {
   return (
     <HeroDiv imagePosition={imagePosition}>
       <ContentDiv imagePosition={imagePosition}>
-        <h1>{title}</h1>
+        <H1>{title}</H1>
         <p>{description}</p>
       </ContentDiv>
       <ImageDiv imagePosition={imagePosition}>
@@ -61,11 +65,10 @@ function Hero() {
   return (
     <div>
       <HeroComponent
-        right
         title="Sell your products everywhere"
         description="Lorem ipsum is placeholder text commonly used in the graphic, print,
   and publishing industries for previewing layouts and visual mockups."
-        img="https://source.unsplash.com/400x300/?analytics"
+        img="https://source.unsplash.com/400x300/?graphs"
         imagePosition="right"
       />
 
@@ -73,7 +76,8 @@ function Hero() {
         title="Market and manage your bussiness on your mobile"
         description="Lorem ipsum is placeholder text commonly used in the graphic, print,
     and publishing industries for previewing layouts and visual mockups."
-        img="https://source.unsplash.com/400x300/?phone"
+        img="https://source.unsplash.com/400x300/?mobile"
+        // img="/src/components/hero/analytics.jpg"
         imagePosition="left"
       />
       <HeroComponent

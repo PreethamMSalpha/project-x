@@ -1,4 +1,6 @@
 import React from "react";
+import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
+
 import "./App.css";
 // import AddItems from "./components/addItems/addItems.components";
 // import ModalCSS from "./components/modal/modal.components";
@@ -8,15 +10,21 @@ import "./App.css";
 // import ShopEntry from "./pages/shopEntry.component";
 // import Modal from "./components/modal.components";
 
-// import Pricing from "./components/shopEntry/pricing/pricing.component";
-// import ShopEntry from "./pages/shopEntry.component";
-// import NavSidebar from "./components/sidebar/sidebar.component";
+import Pricing from "./components/shopEntry/pricing/pricing.component";
+import ShopEntry from "./pages/shopEntry.component";
+import NavSidebar from "./components/sidebar/sidebar.component";
 import Homepage from "./pages/homepage.component";
 
 function App() {
   return (
     <div>
-      <Homepage />
+      <BrowserRouter>
+        <Switch>
+          <Route exact path="/" component={Homepage} />
+          <Route exact path="/shopentry" component={ShopEntry} />
+          <Route exact path="/dash" component={NavSidebar} />
+        </Switch>
+      </BrowserRouter>
     </div>
   );
 }

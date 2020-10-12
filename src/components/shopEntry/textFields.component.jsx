@@ -3,6 +3,8 @@ import TextField from "@material-ui/core/TextField";
 import { makeStyles } from "@material-ui/core/styles";
 import MenuItem from "@material-ui/core/MenuItem";
 import Grid from "@material-ui/core/Grid";
+import Typography from "@material-ui/core/Typography";
+import Container from "@material-ui/core/Container";
 
 const currencies = [
   {
@@ -43,6 +45,21 @@ export default function TextFields() {
   return (
     <form className={classes.root} noValidate autoComplete="off">
       <div>
+        <Container
+          maxWidth="sm"
+          component="main"
+          className={classes.heroContent}
+        >
+          <Typography
+            component="h3"
+            variant="h3"
+            align="center"
+            color="textPrimary"
+            gutterBottom
+          >
+            Create your own shop
+          </Typography>
+        </Container>
         <Grid container justify="center">
           <TextField
             required

@@ -1,35 +1,35 @@
 .MainImage {
-    background-image: url("https://source.unsplash.com/1600x600/?business, analytics, graphs");
-    height: 500px;
-    width: 100%;
+  // background-image: url("https://source.unsplash.com/1600x600/?business, analytics, graphs");
+  background-image: url("./mainImage.jpg");
+  height: 500px;
+  width: 100%;
+  margin: auto;
+  // margin-top: 100px;
+  background-repeat: no-repeat;
+  object-fit: fill;
+
+  .contents {
+    color: black;
     margin: auto;
-    // margin-top: 100px;
-    background-repeat: no-repeat;
-    object-fit: fill;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 180px;
 
-
-    .contents {
-        color: black;
-        margin: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding-top: 180px;
-
-        h1 {
-            margin: unset;
-        }
-
-        .getStarted {
-            cursor: pointer;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-
-            #icon {
-                margin-left: 10px;
-            }
-        }
+    h1 {
+      margin: unset;
     }
+
+    .getStarted {
+      cursor: pointer;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      #icon {
+        margin-left: 10px;
+      }
+    }
+  }
 }
