@@ -80,7 +80,7 @@ const tiers = [
 ];
 
 export default function Pricing() {
-  const classes = usePriceStyles();
+  const classesPrice = usePriceStyles();
 
   const history = useHistory();
   const handleOnClick = useCallback(() => history.push("/dash"), [history]);
@@ -88,7 +88,11 @@ export default function Pricing() {
   return (
     <React.Fragment>
       <CssBaseline />
-      <Container maxWidth="sm" component="main" className={classes.heroContent}>
+      <Container
+        maxWidth="sm"
+        component="main"
+        className={classesPrice.heroContent}
+      >
         <Typography
           component="h1"
           variant="h2"
@@ -118,10 +122,10 @@ export default function Pricing() {
                   titleTypographyProps={{ align: "center" }}
                   subheaderTypographyProps={{ align: "center" }}
                   action={tier.title === "Pro" ? <StarIcon /> : null}
-                  className={classes.cardHeader}
+                  className={classesPrice.cardHeader}
                 />
                 <CardContent>
-                  <div className={classes.cardPricing}>
+                  <div className={classesPrice.cardPricing}>
                     <Typography component="h2" variant="h3" color="textPrimary">
                       ${tier.price}
                     </Typography>
