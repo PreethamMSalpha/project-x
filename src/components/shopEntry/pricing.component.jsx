@@ -13,7 +13,7 @@ import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 
-const useStyles = makeStyles((theme) => ({
+const usePriceStyles = makeStyles((theme) => ({
   "@global": {
     ul: {
       margin: 0,
@@ -80,7 +80,7 @@ const tiers = [
 ];
 
 export default function Pricing() {
-  const classes = useStyles();
+  const classes = usePriceStyles();
 
   const history = useHistory();
   const handleOnClick = useCallback(() => history.push("/dash"), [history]);
