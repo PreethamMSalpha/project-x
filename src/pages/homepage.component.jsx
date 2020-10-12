@@ -2,7 +2,7 @@ import React from "react";
 import Header from "../components/header/header.component";
 import MainImage from "../components/MainImage/MainImage.components";
 import Hero from "../components/hero/hero.component";
-import VideoHomepage from "../components/videoHomepage/videoHomepage.components";
+// import VideoHomepage from "../components/videoHomepage/videoHomepage.components";
 import Footer from "../components/footer/footer.component";
 
 function Homepage() {
@@ -11,10 +11,11 @@ function Homepage() {
       <Header />
       <MainImage />
       <Hero />
-      <VideoHomepage />
       <Footer />
     </div>
   );
 }
 
 export default Homepage;
+
+// <VideoHomepage />

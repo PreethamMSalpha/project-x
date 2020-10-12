@@ -10,7 +10,7 @@ import "./App.css";
 // import ShopEntry from "./pages/shopEntry.component";
 // import Modal from "./components/modal.components";
 
-import Pricing from "./components/shopEntry/pricing/pricing.component";
+import Pricing from "./components/shopEntry/pricing.component";
 import ShopEntry from "./pages/shopEntry.component";
 import NavSidebar from "./components/sidebar/sidebar.component";
 import Homepage from "./pages/homepage.component";

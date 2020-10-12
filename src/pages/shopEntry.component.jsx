@@ -1,5 +1,5 @@
 import React from "react";
-import Pricing from "../components/shopEntry/pricing/pricing.component";
+import Pricing from "../components/shopEntry/pricing.component";
 import TextFields from "../components/shopEntry/textFields.component";
 
 function ShopEntry() {
