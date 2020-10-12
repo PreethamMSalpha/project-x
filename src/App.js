@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 import "./App.css";
 // import AddItems from "./components/addItems/addItems.components";
@@ -10,10 +10,11 @@ import "./App.css";
 // import ShopEntry from "./pages/shopEntry.component";
 // import Modal from "./components/modal.components";
 
+// import ShopEntry from "./pages/shopEntry.component";
 import Pricing from "./components/shopEntry/pricing.component";
-import ShopEntry from "./pages/shopEntry.component";
 import NavSidebar from "./components/sidebar/sidebar.component";
 import Homepage from "./pages/homepage.component";
+import TextFields from "./components/shopEntry/textFields.component";
 
 function App() {
   return (
@@ -21,12 +22,15 @@ function App() {
       <BrowserRouter>
         <Switch>
           <Route exact path="/" component={Homepage} />
-          <Route exact path="/shopentry" component={ShopEntry} />
           <Route exact path="/dash" component={NavSidebar} />
+          <Route exact path="/openshop" component={TextFields} />
+          <Route exact path="/pricing" component={Pricing} />
         </Switch>
       </BrowserRouter>
     </div>
   );
 }
+
+// <Route exact path="/shopentry" component={ShopEntry} />
 
 export default App;

@@ -12,7 +12,7 @@ function MainImage() {
         <h1>in just one click</h1>
         <div className="getStarted">
           <Link
-            to="/shopentry"
+            to="/openshop"
             style={{
               textDecoration: "none",
               color: "black",
